@@ -16,4 +16,5 @@ gvfs gvfs-mtp Thunar tumbler telegram-desktop
 ![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/3.png)
 ![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/4.png)
 ![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/5.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/6.png)
 
