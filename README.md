@@ -1,0 +1,2 @@
+# dots
+bspwm dotfiles
