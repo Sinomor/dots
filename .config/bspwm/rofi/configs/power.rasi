@@ -1,0 +1,95 @@
+configuration {
+	show-icons: false;
+}
+
+@import "config.rasi"
+
+window {
+	width: 378px;
+        border-radius: 0;
+        border: 0;
+	padding: 0;
+	border-color: @accent;
+}
+
+mainbox {
+	children: [inputbar, listview];
+	padding: 10;
+}
+
+inputbar {
+        enabled: false;
+}
+
+listview {
+	enabled: true;
+	columns: 1;
+	lines: 3;
+	cycle: true;
+	dynamic: true;
+	scrollbar: false;
+	layout: horizontal;
+	reverse: false;
+	fixed-height: true;
+	fixed-columns: true;
+    
+	spacing: 15;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+
+element {
+	background-color: rgba(0,0,0,0);
+	padding: 5;
+	border-radius: 0;
+}
+
+element-text {
+	font: "Material Icons Sharp 34";
+	background-color: inherit;
+	text-color: inherit;
+	expand: true;
+	horizontal-align: 0;
+	vertical-align: 0;
+	margin: 34 27 9 27;
+}
+
+element.normal.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.normal.urgent {
+	background-color: @accent;
+	text-color: @background;
+}
+element.normal.active {
+	background-color: @accent;
+	text-color: @background;
+}
+element.selected.normal {
+	background-color: @accent;
+	text-color: @background;
+}
+element.selected.urgent {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.selected.active {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.alternate.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.alternate.urgent {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.alternate.active {
+	background-color: @background;
+	text-color: @foreground;
+}

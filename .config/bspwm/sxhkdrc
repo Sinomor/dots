@@ -1,0 +1,110 @@
+# Open terminal
+super + Return
+	alacritty
+
+# App launcher
+super + d
+	rofi -show drun -config .config/bspwm/rofi/configs/config.rasi
+
+# Powermenu
+super + x
+	sh ~/.config/bspwm/rofi/scripts/powermenu
+
+# Open file manager
+super + e
+	thunar
+
+# Open browser
+super + b
+	librewolf
+
+# Open telegram
+super + a
+	telegram-desktop
+
+# Make screenshot
+Print
+	flameshot gui
+
+# Dunst mute/unmute
+super + m
+	{dunstctl set-paused true && polybar-msg hook dunst 2, dunstctl set-paused false && polybar-msg hook dunst 1}
+
+# Dunst history
+super + shift + d
+	{bash ~/.config/bspwm/dunst.sh display-history,	bash ~/.config/bspwm/dunst.sh close-history}
+
+# Colorpiker
+super + p
+	colorpicker
+
+# Clipboard
+super + c
+	rofi -modi "clipboard:$HOME/.local/bin/greenclip print" -show clipboard -config ~/.config/bspwm/rofi/configs/config.rasi
+
+# Hide bar 
+super + shift + b
+	$HOME/.config/bspwm/polybar/hide.sh
+
+# Increase/decrease volume
+XF86Audio{RaiseVolume,LowerVolume}
+	pamixer -{i,d} 2
+
+# Mute/unmute volume
+XF86AudioMute
+	pamixer {--mute, --unmute}
+
+# Increase/decrease brightness
+XF86MonBrightness{Up,Down}
+	brightnessctl s 5%{+,-}
+
+# Close/kill focus app
+super + {q, shift + q}
+	bspc node -{c,k}
+
+# Reload sxhkd config
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Reload bspwm config
+super + shift + r
+	bspc wm -r
+
+# Set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Focus the node in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Focus/send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Preselect the direction
+super + alt + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# Cancel the preselection for the focused node
+super + alt + space
+	bspc node -p cancel 
+
+# Move current window to a pre-selected space
+super + alt + m
+	bspc node -n last.!automatic
+
+# Show help
+super + shift + s
+	$HOME/.config/bspwm/rofi/scripts/sxhkd_help
+
+# Resize windows
+super + ctrl + {Left,Down,Up,Right}
+	{bspc node -z left -20 0; bspc node -z right -20 0, \
+	bspc node -z bottom 0 20; bspc node -z top 0 20, \
+	bspc node -z bottom 0 -20; bspc node -z top 0 -20, \ 
+	bspc node -z left 20 0; bspc node -z right 20 0}
+
+# books
+super + shift + p
+	$HOME/.config/bspwm/rofi/scripts/books

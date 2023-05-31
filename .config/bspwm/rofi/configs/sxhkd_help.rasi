@@ -1,0 +1,126 @@
+configuration {
+	display-drun: ">";
+	display-clipboard: ">";
+	drun-display-format: "{name}";
+	modi: "drun";
+}
+
+@import "~/.config/bspwm/rofi/themes/colors.rasi"
+
+* {
+	font: "JetbrainsMono Nerd Font 14";
+
+	background-color: @background;
+	separatorcolor: transparent;
+
+	border: 0;
+	margin: 0;
+	padding: 0;
+	spacing: 0;	
+}
+
+window {
+	width: 1000px;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	background-color: @background;
+}
+
+mainbox {
+	background-color: @background;
+	children: [inputbar, listview];
+	padding: 10;
+}
+
+listview {
+	scrollbar: false;
+	padding: 2 0;
+	background-color: @background;
+	columns: 1;
+	lines: 7;
+	margin: 8 0 0 0;
+}
+
+
+inputbar {
+	children: [prompt, entry];
+	background-color: @background-alt;
+	border-radius: 0;
+}
+
+prompt {
+	font: "JetbrainsMono Nerd Font 20";
+	background-color: @background;
+	text-color: @accent;
+	enabled: true;
+	border-radius: 0;
+	padding: -2 10 0 10;
+}
+
+entry {
+	background-color: transparent;
+	text-color: @foreground;
+	placeholder-color: @foreground;
+	border-radius: 0;
+	placeholder: "Search...";
+	blink: false;
+	padding: 4;
+}
+
+element {
+	background-color: rgba(0,0,0,0);
+	padding: 10;
+	border-radius: 0;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+	expand: true;
+	horizontal-align: 0;
+	vertical-align: 0.5;
+}
+
+element-icon {
+	background-color: inherit;
+	text-color: inherit;
+	padding: 0 10 0 0;
+}
+
+element.normal.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.normal.urgent {
+	background-color: @accent;
+	text-color: @foreground;
+}
+element.normal.active {
+	background-color: @accent;
+	text-color: @background;
+}
+element.selected.normal {
+	background-color: @accent;
+	text-color: @background;
+}
+element.selected.urgent {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.selected.active {
+	background-color: @accent;
+	text-color:       @background;
+}
+element.alternate.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.alternate.urgent {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.alternate.active {
+	background-color: @background;
+	text-color: @foreground;
+}

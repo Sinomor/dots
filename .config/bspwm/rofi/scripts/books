@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+bookdir="/run/media/sinomor/files/Books/9 класс"
+cd "$bookdir" || exit
+
+selectpic() {
+	book=$( ls "$bookdir" | tr -d '.pdf' |
+	rofi -dmenu -i -p ">" -config ~/.config/bspwm/rofi/configs/config.rasi)
+		if [ "$book" ]; then
+			chosenbook=$book
+		else
+			exit 0
+		fi
+}
+selectpic
+
+book1=$( echo "$book" | awk '{{$NF=$NF".pdf"} print}')
+
+action= $(zathura "$book1")
