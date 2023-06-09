@@ -6,7 +6,6 @@ pgrep -x dunst > /dev/null || dunst -config /home/sinomor/.config/bspwm/dunstrc 
 pgrep -x picom > /dev/null || picom --config .config/bspwm/picom.conf &
 xsetroot -cursor_name left_ptr &
 feh --bg-fill $HOME/.config/bspwm/wall* &
-xset r rate 215 50 &
 $HOME/.local/bin/greenclip daemon &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
 pgrep -x pipewire > /dev/null || pipewire &
