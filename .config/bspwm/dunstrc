@@ -5,7 +5,7 @@
   padding = 10
   horizontal_padding = 10
   
-  width = 500
+  width = 350
   height = 200
   offset = 30x30
   origin = bottom-right

@@ -1,9 +1,9 @@
 #! /bin/bash
 
-pgrep -x sxhkd > /dev/null || sxhkd -c .config/bspwm/sxhkdrc &
+pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 $HOME/.config/bspwm/polybar/launch.sh &
-pgrep -x dunst > /dev/null || dunst -config .config/bspwm/dunstrc &
-pgrep -x picom > /dev/null || picom --config .config/bspwm/picom.conf &
+pgrep -x dunst > /dev/null || dunst -config $HOME/.config/bspwm/dunstrc &
+pgrep -x picom > /dev/null || picom --config $HOME/.config/bspwm/picom.conf &
 xsetroot -cursor_name left_ptr &
 feh --bg-fill $HOME/.config/bspwm/wall* &
 $HOME/.local/bin/greenclip daemon &
