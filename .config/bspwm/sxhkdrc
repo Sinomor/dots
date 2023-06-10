@@ -23,16 +23,18 @@ super + a
 	telegram-desktop
 
 # Make screenshot
-Print
+super + Print
 	flameshot gui
 
 # Dunst mute/unmute
 super + m
-	{dunstctl set-paused true && polybar-msg hook dunst 2, dunstctl set-paused false && polybar-msg hook dunst 1}
+	{dunstctl set-paused true && polybar-msg hook dunst 2, \
+	 dunstctl set-paused false && polybar-msg hook dunst 1}
 
 # Dunst history
 super + shift + d
-	{bash ~/.config/bspwm/dunst.sh display-history,	bash ~/.config/bspwm/dunst.sh close-history}
+	{bash ~/.config/bspwm/dunst.sh display-history, \
+	bash ~/.config/bspwm/dunst.sh close-history}
 
 # Colorpiker
 super + p
@@ -108,3 +110,12 @@ super + ctrl + {Left,Down,Up,Right}
 # books
 super + shift + p
 	$HOME/.config/bspwm/rofi/scripts/books
+
+# Resize floating windows
+alt + ctrl + {Left,Down,Up,Right}
+	{bspc node -z right -20 20, \
+	bspc node -z bottom 20 20, \
+	bspc node -z bottom 20 -20, \
+	bspc node -z right 20 20}
+	
+	
