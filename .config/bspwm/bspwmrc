@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd -c .config/bspwm/sxhkdrc &
 $HOME/.config/bspwm/polybar/launch.sh &
-pgrep -x dunst > /dev/null || dunst -config /home/sinomor/.config/bspwm/dunstrc &
+pgrep -x dunst > /dev/null || dunst -config .config/bspwm/dunstrc &
 pgrep -x picom > /dev/null || picom --config .config/bspwm/picom.conf &
 xsetroot -cursor_name left_ptr &
 feh --bg-fill $HOME/.config/bspwm/wall* &
