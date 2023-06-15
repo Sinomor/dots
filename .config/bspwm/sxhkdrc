@@ -100,7 +100,7 @@ super + alt + m
 super + shift + s
 	$HOME/.config/bspwm/rofi/scripts/sxhkd_help
 
-# Resize windows
+# Resize tiling windows
 super + ctrl + {Left,Down,Up,Right}
 	{bspc node -z left -20 0; bspc node -z right -20 0, \
 	bspc node -z bottom 0 20; bspc node -z top 0 20, \
