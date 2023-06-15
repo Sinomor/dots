@@ -117,5 +117,7 @@ alt + ctrl + {Left,Down,Up,Right}
 	bspc node -z bottom 20 20, \
 	bspc node -z bottom 20 -20, \
 	bspc node -z right 20 20}
-	
-	
+
+# move floating windows 
+alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
