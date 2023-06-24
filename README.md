@@ -2,7 +2,9 @@
 
 ### Need deps
 ```
-bspwm alacritty xrdb sxhkd cava polybar rofi picom dunst feh polkit-gnome fontconfig fontconfig-32bit libX11-devel libXinerama-devel libXft-devel gdk-pixbuf gpick xclip
+bspwm alacritty xrdb sxhkd cava polybar rofi picom dunst feh polkit-gnome fontconfig \
+fontconfig-32bit libX11-devel libXinerama-devel libXft-devel gdk-pixbuf gpick xclip \
+ImageMagick
 ```
 
 ### Some soft
