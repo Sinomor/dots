@@ -13,10 +13,10 @@ gvfs gvfs-mtp Thunar tumbler telegram-desktop
 ```
 
 ## Screenshots
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/1.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/2.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/3.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/4.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/5.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/screenshots/6.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/1.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/2.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/3.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/4.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/5.png)
+![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/6.png)
 
