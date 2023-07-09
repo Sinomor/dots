@@ -9,6 +9,7 @@ fontconfig-32bit libX11-devel libXinerama-devel libXft-devel gdk-pixbuf gpick xc
 ImageMagick gvfs gvfs-mtp Thunar tumbler
 ```
 
+</details>
 
 ## Screenshots
 ![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/1.png)
