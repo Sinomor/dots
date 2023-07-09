@@ -1,0 +1,12 @@
+#!/bin/bash
+
+[[ -z $(pgrep checkbright) ]] && checkbright &
+
+case $1 in
+--up)
+  brightnessctl s 5%+
+  ;;
+--down)
+  brightnessctl s 5%-
+  ;;
+esac

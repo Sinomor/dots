@@ -1,16 +1,16 @@
 #! /bin/bash
 
 pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+pgrep -x nm-applet > /dev/null || nm-applet --indicator &
 $HOME/.config/bspwm/polybar/launch.sh &
 pgrep -x dunst > /dev/null || dunst -config $HOME/.config/bspwm/dunstrc &
 pgrep -x picom > /dev/null || picom --config $HOME/.config/bspwm/picom.conf &
-xsetroot -cursor_name left_ptr &
-feh --bg-fill $HOME/.config/bspwm/wall* &
-$HOME/.local/bin/greenclip daemon &
+pgrep -x greenclip > /dev/null || greenclip daemon &
+feh --no-fehbg --bg-fill $HOME/.config/bspwm/out.png &
+pgrep -x cycle_wall > /dev/null || cycle_wall 30m &
+pgrep -x eww > /dev/null || eww daemon &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
-pgrep -x pipewire > /dev/null || pipewire &
-pgrep -x pipewire-pulse > /dev/null || pipewire-pulse &
-pgrep -x wireplumber > /dev/null || wireplumber &
+xsetroot -cursor_name left_ptr &
 
 bspc monitor -d 1 2 3 4 5 6
 

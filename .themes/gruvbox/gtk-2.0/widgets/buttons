@@ -264,7 +264,7 @@ style "togglebutton"
 
 style "spinbutton" = "default"
 {
-  #bg[NORMAL] = @bg_color
+  #bg[NORMAL] = @background
 
   xthickness  = 3
   ythickness  = 3
@@ -372,9 +372,9 @@ engine "pixmap"
 }
 
 style "button_label" {
-  fg[NORMAL]      = @button_fg_color
-  fg[ACTIVE]      = @button_fg_color
-  fg[INSENSITIVE] = @button_insensitive_fg_color
+  fg[NORMAL]      = @foreground
+  fg[ACTIVE]      = @foreground
+  fg[INSENSITIVE] = @foreground
 }
 
 style "combobox_separator"

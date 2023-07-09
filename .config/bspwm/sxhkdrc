@@ -4,11 +4,11 @@ super + Return
 
 # App launcher
 super + d
-	rofi -show drun -config .config/bspwm/rofi/configs/config.rasi
+	rofi -show drun -config .config/bspwm/rofi/configs/config.rasi -width 420
 
 # Powermenu
 super + x
-	sh ~/.config/bspwm/rofi/scripts/powermenu
+	powermenu
 
 # Open file manager
 super + e
@@ -33,8 +33,7 @@ super + m
 
 # Dunst history
 super + shift + d
-	{bash ~/.config/bspwm/dunst.sh display-history, \
-	bash ~/.config/bspwm/dunst.sh close-history}
+	{dunst_hist display-history, dunst_hist close-history}
 
 # Colorpiker
 super + p
@@ -42,7 +41,7 @@ super + p
 
 # Clipboard
 super + c
-	rofi -modi "clipboard:$HOME/.local/bin/greenclip print" -show clipboard -config ~/.config/bspwm/rofi/configs/config.rasi
+	rofi -modi "clipboard:greenclip print" -show clipboard -config ~/.config/bspwm/rofi/configs/config.rasi
 
 # Hide bar 
 super + shift + b
@@ -50,15 +49,15 @@ super + shift + b
 
 # Increase/decrease volume
 XF86Audio{RaiseVolume,LowerVolume}
-	pamixer -{i,d} 2
+	volume --{up,down}
 
 # Mute/unmute volume
 XF86AudioMute
-	pamixer {--mute, --unmute}
+	volume --toggle
 
 # Increase/decrease brightness
 XF86MonBrightness{Up,Down}
-	brightnessctl s 5%{+,-}
+	bright --{up,down}
 
 # Close/kill focus app
 super + {q, shift + q}
@@ -98,7 +97,7 @@ super + alt + m
 
 # Show help
 super + shift + s
-	$HOME/.config/bspwm/rofi/scripts/sxhkd_help
+	sxhkd_help
 
 # Resize tiling windows
 super + ctrl + {Left,Down,Up,Right}
@@ -113,11 +112,15 @@ super + shift + p
 
 # Resize floating windows
 alt + ctrl + {Left,Down,Up,Right}
-	{bspc node -z right -20 20, \
-	bspc node -z bottom 20 20, \
-	bspc node -z bottom 20 -20, \
-	bspc node -z right 20 20}
+	bspc node -z {right -20 20, bottom 20 20, bottom 20 -20, right 20 20}
 
 # move floating windows 
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + {equal, minus, 0}
+	gaps {+, -, =}
+
+super + ctrl + {equal, minus, 0}
+	borders {+, -, =}
+

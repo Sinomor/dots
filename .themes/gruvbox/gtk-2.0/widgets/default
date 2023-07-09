@@ -8,38 +8,38 @@ style "default"
     # Style Properties
 
     GtkScrollbar::activate-slider                 = 1
-    GtkWidget::focus-line-width                 = 0
+    GtkWidget::focus-line-width                   = 0
     GtkWidget::new-tooltip-style                  = 1
     GtkWidget::tooltip-alpha                      = 230
-    GtkWidget::tooltip-radius                   = 2
-    GtkMenuBar::window-dragging                 = 1
-    GtkToolbar::window-dragging                 = 1
+    GtkWidget::tooltip-radius                     = 2
+    GtkMenuBar::window-dragging                   = 1
+    GtkToolbar::window-dragging                   = 1
     GtkToolbar::internal-padding                  = 5
-    GtkToolButton::icon-spacing                 = 4
+    GtkToolButton::icon-spacing                   = 4
 
     GtkSeparatorMenuItem::horizontal-padding      = 3
     GtkSeparatorMenuItem::wide-separators         = 1
     GtkSeparatorMenuItem::separator-height        = 1
 
-    GtkCheckMenuItem::indicator-size                  = 18
-    GtkRadioMenuItem::indicator-size                  = 18
+    GtkCheckMenuItem::indicator-size              = 18
+    GtkRadioMenuItem::indicator-size              = 18
 
-    GtkButton::child-displacement-y             = 0
+    GtkButton::child-displacement-y               = 0
     GtkButton::default-border                     = { 0, 0, 0, 0 }
     GtkButton::default-outside_border             = { 0, 0, 0, 0 }
 
-    GtkScrollbar::trough-border                 = 0
-    GtkScrollbar::slider-width                  = 20
+    GtkScrollbar::trough-border                   = 0
+    GtkScrollbar::slider-width                    = 20
     GtkRange::trough-border                       = 0
     GtkRange::slider-width                        = 7
     GtkRange::stepper-size                        = 0
 
     GtkScrollbar::has-backward-stepper            = 1
-    GtkScrollbar::has-forward-stepper               = 1
-    GtkScrollbar::stepper-size                      = 4
-    GtkScrollbar::stepper-spacing                     = 0
-    GtkScrolledWindow ::scrollbar-spacing           = 0
-    GtkScrolledWindow ::scrollbars-within-bevel = 1
+    GtkScrollbar::has-forward-stepper             = 1
+    GtkScrollbar::stepper-size                    = 4
+    GtkScrollbar::stepper-spacing                 = 0
+    GtkScrolledWindow ::scrollbar-spacing         = 0
+    GtkScrolledWindow ::scrollbars-within-bevel   = 1
 
     GtkVScale::slider_length                      = 20
     GtkVScale::slider_width                       = 20
@@ -47,54 +47,54 @@ style "default"
     GtkHScale::slider_width                       = 20
 
     GtkStatusbar::shadow_type                     = GTK_SHADOW_NONE
-    GtkSpinButton::shadow_type                  = GTK_SHADOW_NONE
+    GtkSpinButton::shadow_type                    = GTK_SHADOW_NONE
     GtkMenuBar::shadow-type                       = GTK_SHADOW_NONE
     GtkMenuBar::internal-padding                  = 3
-    GtkMenu::horizontal-padding                 = 0
+    GtkMenu::horizontal-padding                   = 0
     GtkMenu::vertical-padding                     = 0
 
     GtkNotebook::tab-overlap                      = 1
-    GtkNotebook::tab-curvature                  = 3
+    GtkNotebook::tab-curvature                    = 3
 
     GtkCheckButton::indicator_spacing             = 3
-    #GtkOptionMenu::indicator_spacing              = { 0, 0, 0, 0 }
+    #GtkOptionMenu::indicator_spacing             = { 0, 0, 0, 0 }
 
     GtkTreeView::row_ending_details               = 0
     GtkTreeView::expander-size                    = 12
     GtkTreeView::vertical-separator               = 1
     GtkTreeView::horizontal-separator             = 4
-    GtkTreeView::allow-rules                        = 1
+    GtkTreeView::allow-rules                      = 1
 
     GtkProgressBar::min-horizontal-bar-height     = 8
     GtkProgressBar::min-vertical-bar-width        = 8
 
-    GtkEntry::state-hint                              = 1
+    GtkEntry::state-hint                          = 1
 
     # Colors
 
-    bg[NORMAL]          = @bg_color
-    bg[PRELIGHT]          = @bg_color
-    bg[SELECTED]          = @selected_bg_color
-    bg[INSENSITIVE]   = @bg_color
-    bg[ACTIVE]          = @bg_color
+    bg[NORMAL]            = @background
+    bg[PRELIGHT]          = @accent
+    bg[SELECTED]          = @accent
+    bg[INSENSITIVE]       = @background
+    bg[ACTIVE]            = @accent
 
-    fg[NORMAL]          = @fg_color
-    fg[PRELIGHT]          = @fg_color
-    fg[SELECTED]          = @selected_fg_color
-    fg[INSENSITIVE]   = @insensitive_fg_color
-    fg[ACTIVE]            = @fg_color
+    fg[NORMAL]            = @foreground
+    fg[PRELIGHT]          = @background
+    fg[SELECTED]          = @foreground
+    fg[INSENSITIVE]       = @foreground
+    fg[ACTIVE]            = @foreground
 
-    text[NORMAL]          = @text_color
-    text[PRELIGHT]      = @text_color
-    text[SELECTED]      = @selected_fg_color
-    text[INSENSITIVE]   = @insensitive_text_color
-    text[ACTIVE]          = @selected_fg_color
+    text[NORMAL]          = @foreground
+    text[PRELIGHT]        = @background
+    text[SELECTED]        = @background
+    text[INSENSITIVE]     = @background_alt
+    text[ACTIVE]          = @background
 
-    base[NORMAL]          = @base_color
-    base[PRELIGHT]      = @base_color
-    base[SELECTED]      = @selected_bg_color
-    base[INSENSITIVE]   = @bg_color
-    base[ACTIVE]          = @selected_bg_color
+    base[NORMAL]          = @background
+    base[PRELIGHT]        = @accent
+    base[SELECTED]        = @accent
+    base[INSENSITIVE]     = @background_alt
+    base[ACTIVE]          = @accent
 
     # All pixmap options are consolidated below this point
 
@@ -155,7 +155,7 @@ style "default"
               state                   = NORMAL
             shadow                  = IN
             overlay_file            = "../assets/check-checked-active.png"
-            overlay_stretch       = FALSE
+            overlay_stretch         = FALSE
         }
     image
     {
@@ -232,7 +232,7 @@ style "default"
     {
             function                = OPTION
             state                   = INSENSITIVE
-            shadow                = OUT
+            shadow                  = OUT
             overlay_file            = "../assets/radio-unchecked-insensitive.png"
             overlay_stretch         = FALSE
         }
@@ -255,23 +255,23 @@ style "default"
     image
     {
             function                = OPTION
-              state                   = ACTIVE
+              state                 = ACTIVE
             shadow                  = IN
             overlay_file            = "../assets/radio-checked-active.png"
-            overlay_stretch       = FALSE
+            overlay_stretch         = FALSE
         }
     image
     {
             function                = OPTION
-              state                   = SELECTED
+              state                 = SELECTED
             shadow                  = IN
             overlay_file            = "../assets/radio-checked-active.png"
-            overlay_stretch       = FALSE
+            overlay_stretch         = FALSE
         }
     image
     {
             function                = OPTION
-              state                     = INSENSITIVE
+              state                 = INSENSITIVE
             shadow                  = IN
             overlay_file            = "../assets/radio-checked-insensitive.png"
             overlay_stretch         = FALSE
@@ -282,7 +282,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = NORMAL
+      state                 = NORMAL
       overlay_file          = "../assets/arrow-up.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -291,7 +291,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = PRELIGHT
+      state                 = PRELIGHT
       overlay_file          = "../assets/arrow-up-hover.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -300,7 +300,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = ACTIVE
+      state                 = ACTIVE
       overlay_file          = "../assets/arrow-up-active.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -309,7 +309,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = INSENSITIVE
+      state                 = INSENSITIVE
       overlay_file          = "../assets/arrow-up-insensitive.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -319,7 +319,7 @@ style "default"
     image
     {
     function                = ARROW
-      state                   = NORMAL
+      state                 = NORMAL
       overlay_file          = "../assets/arrow-down.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -328,7 +328,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = PRELIGHT
+      state                 = PRELIGHT
       overlay_file          = "../assets/arrow-down-hover.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -337,7 +337,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = ACTIVE
+      state                 = ACTIVE
       overlay_file          = "../assets/arrow-down-active.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -347,7 +347,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = INSENSITIVE
+      state                 = INSENSITIVE
       overlay_file          = "../assets/arrow-down-insensitive.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -357,7 +357,7 @@ style "default"
     image
     {
       function              = ARROW
-      state                   = NORMAL
+      state                 = NORMAL
       overlay_file          = "../assets/arrow-left.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -365,27 +365,27 @@ style "default"
     }
     image
     {
-        function                = ARROW
-        state                   = PRELIGHT
-        overlay_file          = "../assets/arrow-left-hover.png"
+        function            = ARROW
+        state               = PRELIGHT
+        overlay_file        = "../assets/arrow-left-hover.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = LEFT
     }
     image
     {
-        function                = ARROW
-        state                   = ACTIVE
-        overlay_file          = "../assets/arrow-left-active.png"
+        function            = ARROW
+        state               = ACTIVE
+        overlay_file        = "../assets/arrow-left-active.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = LEFT
     }
     image
     {
-        function                = ARROW
-        state                   = INSENSITIVE
-        overlay_file          = "../assets/arrow-left-insensitive.png"
+        function            = ARROW
+        state               = INSENSITIVE
+        overlay_file        = "../assets/arrow-left-insensitive.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = LEFT
@@ -393,36 +393,36 @@ style "default"
 
     image
     {
-        function                = ARROW
-        state                     = NORMAL
-        overlay_file          = "../assets/arrow-right.png"
+        function            = ARROW
+        state               = NORMAL
+        overlay_file        = "../assets/arrow-right.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = RIGHT
     }
     image
     {
-        function                = ARROW
-        state                   = PRELIGHT
-        overlay_file          = "../assets/arrow-right-hover.png"
+        function            = ARROW
+        state               = PRELIGHT
+        overlay_file        = "../assets/arrow-right-hover.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = RIGHT
     }
     image
     {
-        function                = ARROW
-        state                   = ACTIVE
-        overlay_file          = "../assets/arrow-right-active.png"
+        function            = ARROW
+        state               = ACTIVE
+        overlay_file        = "../assets/arrow-right-active.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = RIGHT
     }
     image
     {
-        function                = ARROW
-        state                   = INSENSITIVE
-        overlay_file          = "../assets/arrow-right-insensitive.png"
+        function            = ARROW
+        state               = INSENSITIVE
+        overlay_file        = "../assets/arrow-right-insensitive.png"
         overlay_border      = { 0, 0, 0, 0 }
         overlay_stretch     = FALSE
         arrow_direction     = RIGHT
@@ -433,15 +433,15 @@ style "default"
 
     image
     {
-      function            = TAB
+      function              = TAB
       state                 = INSENSITIVE
-      overlay_file        = "../assets/arrow-down-insensitive.png"
-      overlay_stretch     = FALSE
+      overlay_file          = "../assets/arrow-down-insensitive.png"
+      overlay_stretch       = FALSE
     }
     image
     {
       function              = TAB
-      state                   = NORMAL
+      state                 = NORMAL
       overlay_file          = "../assets/arrow-down.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -449,7 +449,7 @@ style "default"
     image
     {
       function              = TAB
-      state                   = PRELIGHT
+      state                 = PRELIGHT
       overlay_file          = "../assets/arrow-down.png"
       overlay_border        = { 0, 0, 0, 0 }
       overlay_stretch       = FALSE
@@ -460,16 +460,16 @@ style "default"
     image
     {
        function         = VLINE
-       file               = "../assets/handle-v.png"
-       border             = { 0, 0, 0, 0 }
+       file             = "../assets/handle-v.png"
+       border           = { 0, 0, 0, 0 }
        stretch          = TRUE
     }
     image
     {
-      function        = HLINE
-      file                = "../assets/line-h.png"
-      border              = { 0, 0, 0, 0 }
-      stretch             = TRUE
+      function          = HLINE
+      file              = "../assets/line-h.png"
+      border            = { 0, 0, 0, 0 }
+      stretch           = TRUE
     }
 
     # Handles
@@ -479,14 +479,14 @@ style "default"
       function              = HANDLE
       overlay_file          = "../assets/handle-h.png"
       overlay_stretch       = FALSE
-      orientation             = HORIZONTAL
+      orientation           = HORIZONTAL
     }
     image
     {
       function              = HANDLE
       overlay_file          = "../assets/handle-v.png"
       overlay_stretch       = FALSE
-      orientation             = VERTICAL
+      orientation           = VERTICAL
     }
 
     # Expanders
@@ -494,49 +494,40 @@ style "default"
     image
     {
         function            = EXPANDER
-        expander_style    = COLLAPSED
-        file                  = "../assets/arrow-right.png"
+        expander_style      = COLLAPSED
+        file                = "../assets/arrow-right.png"
     }
 
     image
     {
         function            = EXPANDER
-        expander_style    = EXPANDED
-        file                  = "../assets/arrow-down.png"
-    }
-
-    image
-    {
-        function          = EXPANDER
-        expander_style  = SEMI_EXPANDED
+        expander_style      = EXPANDED
         file                = "../assets/arrow-down.png"
     }
 
     image
     {
         function            = EXPANDER
-        expander_style    = SEMI_COLLAPSED
-        file                  = "../assets/arrow-right.png"
+        expander_style      = SEMI_EXPANDED
+        file                = "../assets/arrow-down.png"
+    }
+
+    image
+    {
+        function            = EXPANDER
+        expander_style      = SEMI_COLLAPSED
+        file                = "../assets/arrow-right.png"
     }
 
     image
     {
         function            = RESIZE_GRIP
-        state                 = NORMAL
+        state               = NORMAL
         detail              = "statusbar"
         overlay_file        = "../assets/null.png"
-        overlay_border    = { 0,0,0,0 }
-        overlay_stretch   = FALSE
+        overlay_border      = { 0, 0, 0, 0 }
+        overlay_stretch     = FALSE
     }
 
-    # Shadows ( this area needs help :P )
-
-    image
-    {
-       function         = SHADOW_GAP
-       file             = "../assets/null.png"
-       border             = { 4, 4, 4, 4 }
-       stretch          = TRUE
-    }
   }
 }

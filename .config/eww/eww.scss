@@ -1,0 +1,64 @@
+* {
+  all: unset;
+  transition: 200ms;
+}
+
+$bg: #3c3836;
+$bg-alt: #4d4642;
+$fg: #d4be98;
+$fg-alt: #cacaca;
+$black: #262626;
+$gray: #4c4c4c;
+$red: #dd6777;
+$green: #9ec49f;
+$yellow: #ceb188;
+$blue: #a39ec4;
+$magenta: #c49ec4;
+$cyan: #9ec3c4;
+$white: $fg;
+
+window>.volume_pop {
+	margin: 0rem;
+	background-color: $bg;
+}
+
+.volume_pop {
+	font-family: "feather";
+	background-color: transparent;
+	padding: 0.5rem;
+	border-radius: 0rem;
+}
+
+window>.bright_pop {
+	margin: 0rem;
+	background-color: $bg;
+}
+
+.bright_pop {
+	font-family: "feather";
+	background-color: transparent;
+	padding: 0.5rem;
+	border-radius: 0rem;
+}
+
+  label {
+	font-size: 2.2rem;
+	padding: 0 0.4rem;
+	color: $bg;
+}
+	
+  .scale scale trough highlight {
+	all: unset;
+	background-color: $fg;
+	border-radius: 0rem;
+  	min-width: 3rem;
+}
+
+  .scale scale trough {
+	all: unset;
+	background-color: $bg-alt;
+	border-radius: 0rem;
+	min-height: 3rem;
+	min-width: 15rem;
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+
+backlight_device=intel_backlight
+brightness_file=/sys/class/backlight/${backlight_device}/brightness
+
+echo $"cat $brightness_file"
+
+echo $brightness_file | entr -n -s "cat $brightness_file" 

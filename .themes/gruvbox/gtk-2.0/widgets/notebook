@@ -1,6 +1,6 @@
 style "notebook_tab_label"
 {
-  fg[ACTIVE] = @fg_color
+  fg[ACTIVE] = @foreground
 }
 
 

@@ -3,9 +3,9 @@ style "entry"
     xthickness    = 4
     ythickness      = 4
 
-  base[NORMAL] = @base_color
-  base[ACTIVE] = @base_color
-  base[INSENSITIVE] = @insensitive_base_color
+  base[NORMAL] = @background_alt
+  base[ACTIVE] = @background_alt
+  base[INSENSITIVE] = @background_alt
 
     engine "pixmap"
     {
@@ -131,7 +131,7 @@ style "combobox_entry_button"
 {
   xthickness = 6
 
-  fg[ACTIVE] = @text_color
+  fg[ACTIVE] = @foreground
 
   engine "pixmap" {
 

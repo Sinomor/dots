@@ -1,0 +1,58 @@
+(deflisten volume	`scripts/volume`)
+(deflisten bright	`scripts/bright`)
+
+(defwidget volume-popup []
+(box
+:class "volume_pop"
+:hexpand true
+	(overlay
+		(box
+		:class "scale"
+			(scale
+			:min -24
+			:max 100
+			:value {volume == "muted" ? 0 : volume}
+			)
+		)
+		(label
+		:halign "start"
+		:text {volume == "muted" ? "" : 
+		volume < 33 ? "" : 
+ 		volume < 67 ? "" : ""} 
+		)
+	)
+)
+)
+
+(defwindow volume
+  :monitor 0
+  :geometry (geometry :x "30" :y "-30" :width "10%" :anchor "bottom left")
+  (volume-popup)
+)
+
+(defwidget bright-popup []
+(box
+:class "bright_pop"
+:hexpand true
+	(overlay
+		(box
+		:class "scale"
+ 			(scale
+			:min -24
+			:max 100
+			:value bright
+			)
+		)
+		(label
+		:halign "start"
+		:text { "" }
+		)
+	)
+)
+)
+
+(defwindow bright
+  :monitor 0
+  :geometry (geometry :x "30" :y "-30" :width "10%" :anchor "bottom left")
+  (bright-popup)
+)

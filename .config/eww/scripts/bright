@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+
+backlight_device=intel_backlight
+backlight_dir=/sys/class/backlight/${backlight_device}
+brightness_file=${backlight_dir}/brightness
+max_brightness=$(cat ${backlight_dir}/max_brightness)
+
+get_percentage(){
+	brightness=$(cat ${backlight_dir}/brightness)
+	echo $(( 100 * $brightness / $max_brightness ))
+}
+
+
+get_percentage
+echo $brightness_file | entr -n -s "echo ''" | while read -r _ 
+do 
+    get_percentage 
+done

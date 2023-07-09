@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bookdir="/run/media/sinomor/files/Books/9 класс"
+bookdir="$HOME/.disk/Books/10 класс"
 cd "$bookdir" || exit
 
 selectpic() {

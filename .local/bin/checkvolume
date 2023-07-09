@@ -1,0 +1,27 @@
+#!/bin/bash
+
+vol="$(eww get volume)"
+sleep_duration=2
+
+# open eww volume
+[[ -z $(eww windows | grep '*volume') ]] && eww open volume
+
+while true; do
+  sleep $sleep_duration
+
+  new_vol=$(eww get volume)
+
+  if [ "$vol" != "$new_vol" ]; then
+    # if volume has changed, then reset sleep
+    sleep_duration=2
+    vol="$new_vol"
+  else
+    # check if the volume still hasn't changed
+    newest_vol=$(eww get volume)
+    if [ "$vol" == "$newest_vol" ]; then
+      # if not changed within the sleep time, then close eww volume
+      [[ -n $(eww windows | grep '*volume') ]] && eww close volume;
+      exit
+    fi
+  fi
+done

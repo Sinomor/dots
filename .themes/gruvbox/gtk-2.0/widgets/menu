@@ -1,11 +1,11 @@
 style "menubar"
 {
-    #bg[SELECTED] = @selected_fg_color
+    #bg[SELECTED] = @background
 
-	fg[NORMAL] = @fg_color
-	fg[SELECTED] = @selected_fg_color
+	fg[NORMAL] = @foreground
+	fg[SELECTED] = @background
 
-    text[PRELIGHT] = @fg_color
+    text[PRELIGHT] = @background
 
     xthickness  = 0
     ythickness  = 0
@@ -48,9 +48,9 @@ style "menu_item"
     xthickness  = 2
     ythickness  = 4
 
-    bg[PRELIGHT]      = @button_active
-    fg[PRELIGHT]      = @selected_fg_color
-    text[PRELIGHT]  = @selected_fg_color
+    bg[PRELIGHT]      = @accent
+    fg[PRELIGHT]      = @background
+    text[PRELIGHT]  = @background
 
     GtkMenuItem::toggle-spacing = 10
     GtkMenuItem::arrow-spacing = 10
@@ -243,8 +243,8 @@ style "menubar_item"
 {
     xthickness  = 2
     ythickness  = 2
-    bg[PRELIGHT]    = @selected_fg_color
-    fg[PRELIGHT]    = @selected_fg_color
+    bg[PRELIGHT]    = @accent
+    fg[PRELIGHT]    = @background
 }
 
 style "menu_framed_box" #this is not needed in Gnome
@@ -255,7 +255,7 @@ style "menu_framed_box" #this is not needed in Gnome
      {
         function                = BOX
         detail                  = "menu"
-        file                          = "../assets/frame.png"
+        file                          = "../assets/frame-menu.png"
         border                  = { 3, 3, 3, 3 }
         stretch                   = TRUE
      }

@@ -9,14 +9,7 @@ configuration {
 
 * {
 	font: "JetbrainsMono Nerd Font 14";
-
-	background-color: @background;
 	separatorcolor: transparent;
-
-	border: 0;
-	margin: 0;
-	padding: 0;
-	spacing: 0;	
 }
 
 window {
@@ -33,25 +26,16 @@ mainbox {
 	padding: 10;
 }
 
-listview {
-	scrollbar: false;
-	padding: 2 0;
-	background-color: @background;
-	columns: 1;
-	lines: 7;
-	margin: 8 0 0 0;
-}
-
-
 inputbar {
 	children: [prompt, entry];
-	background-color: @background-alt;
+	background-color: @background;
 	border-radius: 0;
+	margin: 0 0 5 0;
 }
 
 prompt {
 	font: "JetbrainsMono Nerd Font 20";
-	background-color: @background;
+	background-color: @background-alt;
 	text-color: @accent;
 	enabled: true;
 	border-radius: 0;
@@ -59,19 +43,33 @@ prompt {
 }
 
 entry {
-	background-color: transparent;
+	background-color: @background;
 	text-color: @foreground;
 	placeholder-color: @foreground;
 	border-radius: 0;
 	placeholder: "Search...";
 	blink: false;
-	padding: 4;
+	padding: 4 0 0 10;
+}
+
+listview {
+	scrollbar: false;
+	padding: 0;
+	background-color: @background;
+	columns: 1;
+	lines: 7;
+	margin: 0;
+	spacing: 10;
+ 	dynamic: true;
+	scrollbar: false;
+	layout: vertical;
+	fixed-height: true;
+	fixed-columns: true;
 }
 
 element {
 	background-color: rgba(0,0,0,0);
 	padding: 10;
-	border-radius: 0;
 }
 
 element-text {
@@ -82,45 +80,17 @@ element-text {
 	vertical-align: 0.5;
 }
 
-element-icon {
-	background-color: inherit;
-	text-color: inherit;
-	padding: 0 10 0 0;
+element.normal.normal {
+	background-color: @background-alt;
+	text-color: @foreground;
 }
 
-element.normal.normal {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.normal.urgent {
-	background-color: @accent;
-	text-color: @foreground;
-}
-element.normal.active {
-	background-color: @accent;
-	text-color: @background;
-}
 element.selected.normal {
 	background-color: @accent;
 	text-color: @background;
 }
-element.selected.urgent {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.selected.active {
-	background-color: @accent;
-	text-color:       @background;
-}
+
 element.alternate.normal {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.alternate.urgent {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.alternate.active {
-	background-color: @background;
+	background-color: @background-alt;
 	text-color: @foreground;
 }

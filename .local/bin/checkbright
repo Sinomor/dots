@@ -1,0 +1,27 @@
+#!/bin/bash
+
+vol="$(eww get bright)"
+sleep_duration=2
+
+# open eww bright
+[[ -z $(eww windows | grep '*bright') ]] && eww open bright
+
+while true; do
+  sleep $sleep_duration
+
+  new_vol=$(eww get bright)
+
+  if [ "$vol" != "$new_vol" ]; then
+    # if bright has changed, then reset sleep
+    sleep_duration=2
+    vol="$new_vol"
+  else
+    # check if the bright still hasn't changed
+    newest_vol=$(eww get bright)
+    if [ "$vol" == "$newest_vol" ]; then
+      # if not changed within the sleep time, then close eww bright
+      [[ -n $(eww windows | grep '*bright') ]] && eww close bright;
+      exit
+    fi
+  fi
+done

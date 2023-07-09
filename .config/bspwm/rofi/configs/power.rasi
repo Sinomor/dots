@@ -2,23 +2,20 @@ configuration {
 	show-icons: false;
 }
 
-@import "config.rasi"
+@import "~/.config/bspwm/rofi/themes/colors.rasi"
 
 window {
-	width: 378px;
-        border-radius: 0;
-        border: 0;
+	width: 390px;
+	border-radius: 0;
+	border: 0;
 	padding: 0;
-	border-color: @accent;
+	background-color: @background;
 }
 
 mainbox {
-	children: [inputbar, listview];
+	children: [listview];
 	padding: 10;
-}
-
-inputbar {
-        enabled: false;
+	background-color: @background;
 }
 
 listview {
@@ -38,58 +35,27 @@ listview {
 	padding: 0;
 	border: 0;
 	border-radius: 0;
+	background-color:  @background;
 }
 
 
 element {
-	background-color: rgba(0,0,0,0);
-	padding: 5;
+	background-color: @background-alt;
+	text-color: @foreground;
+	padding: 30 34;
 	border-radius: 0;
 }
 
 element-text {
-	font: "Material Icons Sharp 34";
+	font: "feather 34";
 	background-color: inherit;
 	text-color: inherit;
 	expand: true;
-	horizontal-align: 0;
-	vertical-align: 0;
-	margin: 34 27 9 27;
+	horizontal-align: 0.5;
+	vertical-align: 0.6;
 }
 
-element.normal.normal {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.normal.urgent {
-	background-color: @accent;
-	text-color: @background;
-}
-element.normal.active {
-	background-color: @accent;
-	text-color: @background;
-}
 element.selected.normal {
 	background-color: @accent;
 	text-color: @background;
-}
-element.selected.urgent {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.selected.active {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.alternate.normal {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.alternate.urgent {
-	background-color: @background;
-	text-color: @foreground;
-}
-element.alternate.active {
-	background-color: @background;
-	text-color: @foreground;
 }
