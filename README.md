@@ -8,6 +8,7 @@
 - Visualizer  [Cava](https://github.com/karlstav/cava)
 - Widgets  [Eww](https://github.com/elkowar/eww) (included in repo)
 
+<br>
 
 
 <details>
@@ -35,5 +36,5 @@ ImageMagick gvfs gvfs-mtp Thunar tumbler
 
 - [Owl](https://notabug.org/owl410) *For sharing my repo*
 
-- [juminai](https://github.com/juminai) *For the OSD widget idea*
+- [juminai](https://github.com/juminai) *For OSD widget idea*
 
