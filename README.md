@@ -1,9 +1,10 @@
 <details>
 <summary><b>Install dependencies</b></summary>
+<br>
 
 > Some dependencies (not all)
 
-```
+```sh
 bspwm alacritty xrdb sxhkd cava polybar rofi picom dunst feh polkit-gnome fontconfig \
 fontconfig-32bit libX11-devel libXinerama-devel libXft-devel gdk-pixbuf gpick xclip \
 ImageMagick gvfs gvfs-mtp Thunar tumbler
@@ -12,8 +13,8 @@ ImageMagick gvfs gvfs-mtp Thunar tumbler
 </details>
 
 ## Screenshots
-![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/1.png)
-![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/2.png)
+![Screenshot](extra/screenshots/1.png)
+![Screenshot](extra/screenshots/2.png)
 
 
 ## Special Thanks

@@ -30,9 +30,9 @@
   icon_position = center
   max_icon_size= 60
   enable_recursive_icon_lookup = true
-  icon_theme = Tela_black  
+  icon_theme = Papirus  
   sticky_history = yes
-  history_length = 6
+  history_length = 5
   title = Dunst
   class = Dunst
   corner_radius = 0
