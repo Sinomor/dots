@@ -1,12 +1,12 @@
-- Window Manager  [Bspwm](https://github.com/baskerville/bspwm)
-- Panel  [Polybar](https://github.com/polybar/polybar)
-- Launcher  [Rofi](https://github.com/davatorium/rofi)
-- Notify Daemon  [Dunst](https://github.com/dunst-project/dunst)
-- File Manager  [Thunar](https://gitlab.xfce.org/xfce/thunar)
-- Terminal  [Alacritty](https://github.com/alacritty/alacritty)
-- Font [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) (included in repo)
-- Visualizer  [Cava](https://github.com/karlstav/cava)
-- Widgets  [Eww](https://github.com/elkowar/eww) (included in repo)
+- Window Manager: [Bspwm](https://github.com/baskerville/bspwm)
+- Panel: [Polybar](https://github.com/polybar/polybar)
+- Launcher: [Rofi](https://github.com/davatorium/rofi)
+- Notify Daemon: [Dunst](https://github.com/dunst-project/dunst)
+- File Manager: [Thunar](https://gitlab.xfce.org/xfce/thunar)
+- Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+- Font: [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) (included in repo)
+- Visualizer: [Cava](https://github.com/karlstav/cava)
+- Widgets: [Eww](https://github.com/elkowar/eww) (included in repo)
 
 <br>
 
@@ -24,6 +24,7 @@ ImageMagick gvfs gvfs-mtp Thunar tumbler
 ```
 
 </details>
+<br>
 
 ## Screenshots
 ![Screenshot](extra/screenshots/1.png)
