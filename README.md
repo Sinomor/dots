@@ -1,5 +1,3 @@
-## Installation
-
 <details>
 <summary><b>Install dependencies</b></summary>
 
@@ -11,8 +9,6 @@ fontconfig-32bit libX11-devel libXinerama-devel libXft-devel gdk-pixbuf gpick xc
 ImageMagick gvfs gvfs-mtp Thunar tumbler
 ```
 
-<details>
-
 
 ## Screenshots
 ![alt text](https://github.com/Sinomor/dots/blob/main/extra/screenshots/1.png)
@@ -21,7 +17,9 @@ ImageMagick gvfs gvfs-mtp Thunar tumbler
 
 ## Special Thanks
 
- **[Myagko]**(https://github.com/Myagko) *For gtk theme*
- **[Owl]**(https://notabug.org/owl410) *For PR of my repo*
- **[juminai]**(https://github.com/juminai) *For the OSD widget idea*
+- [Myagko](https://github.com/Myagko) *For gtk theme*
+
+- [Owl](https://notabug.org/owl410) *For PR of my repo*
+
+- [juminai](https://github.com/juminai) *For the OSD widget idea*
 
