@@ -6,7 +6,7 @@ palette="gruvbox-dark-soft"
 for image in "${list[@]}"
 do
 
-lutgen -p $palette apply $folder_path/$image -o $out
+lutgen apply -p $palette $folder_path/$image -o $out
 feh --no-fehbg --bg-fill $out
 
 sleep $1
