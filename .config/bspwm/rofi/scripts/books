@@ -4,7 +4,7 @@ bookdir="$HOME/.disk/Books/10 класс"
 cd "$bookdir" || exit
 
 selectpic() {
-	book=$( ls "$bookdir" | tr -d '.pdf' |
+	book=$( ls "$bookdir" | cut -f 1 -d '.' |
 	rofi -dmenu -i -p ">" -config ~/.config/bspwm/rofi/configs/config.rasi)
 		if [ "$book" ]; then
 			chosenbook=$book
@@ -14,6 +14,4 @@ selectpic() {
 }
 selectpic
 
-book1=$( echo "$book" | awk '{{$NF=$NF".pdf"} print}')
-
-action= $(zathura "$book1")
+zathura "$( find "$bookdir" -name "$book*" )"
